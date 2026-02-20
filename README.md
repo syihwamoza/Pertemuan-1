@@ -1,3 +1,9 @@
+## Gambaran Hasil
+<img width="1918" height="990" alt="Screenshot 2026-02-20 233542" src="https://github.com/user-attachments/assets/21999448-0850-4cbf-9d31-c976aa21e1dd" />
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
