@@ -52,8 +52,7 @@
        <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
     <div class="relative">
         {{-- Card belakang --}}
-        <div style="position:absolute; background-color:#e8dfc8; border-radius:0.5rem; width:100%; height:100%; top:12px; left:12px;"></div>
-        
+                <div style="position:absolute; background-color:#e8dfc8; border-radius:0.5rem; width:100%; height:100%; top:12px; left:12px;"></div>
         {{-- Card utama --}}
         <main class="flex max-w-[335px] w-full flex-col lg:max-w-2xl relative">
     <div class="text-[13px] leading-[20px] flex-1 p-8 pb-12 lg:p-20 bg-[#f5f0e8] dark:bg-[#2a2318] text-[#1b1b18] dark:text-[#ffeef6] shadow-[inset_0px_0px_0px_1px_rgba(0,0,0,0.06)] dark:shadow-[inset_0px_0px_0px_1px_rgba(255,255,255,0.03)] rounded-lg flex flex-col items-center text-center">                    <h1 class="mb-2 text-2xl font-semibold">Haii! Aku <span class="text-[#d81b60]">Syihwa Moza Alika YP Kastella</span> <span aria-hidden="true">💖</span></h1>
