@@ -1,28 +1,24 @@
 <?php
-
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
-// Halaman utama langsung menampilkan About
-Route::get('/', [AboutController::class, 'index']);
+// Pindahkan ke luar middleware agar bisa diakses langsung
+// Product Page
+Route::get('/product', [ProductController::class, 'index'])->name('product.index');
+Route::post('/product', [ProductController::class, 'store'])->name('product.store');
+Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
+Route::put('/product/update/{id}', [ProductController::class, 'update'])->name('product.update');
+Route::get('/product/edit/{product}', [ProductController::class, 'edit'])->name('product.edit');
+Route::delete('/product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
 
-// Rute About ini sekarang BEBAS diakses siapa saja (Publik)
-Route::get('/about', [AboutController::class, 'index'])->name('about');
-
-// Halaman yang butuh login (Dashboard & Profile)
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+// Biarkan yang lain di dalam auth jika memang diperlukan nanti
+Route::middleware('auth')->group(function () {
+    // Rute lain...
 });
 
+Route::get('/', [ProductController::class, 'index']);
+Route::get('/dashboard', [ProductController::class, 'index'])->name('dashboard');
 Route::get('/about', function () {
-    return view('about');
-})->middleware(['auth', 'verified'])->name('about');
-
-require __DIR__.'/auth.php';
+    return "Halaman About";
+})->name('about');
